@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 
 // Actions
-import NotFound from "../components/NotFound";
+import NotFound from "./NotFound";
 import HomeIndex from "./Home/Index";
 import HomeExample from "./Home/Example";
 

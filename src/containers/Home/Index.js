@@ -5,14 +5,20 @@ import { withStyles } from "material-ui/styles";
 import Paper from "material-ui/Paper";
 import Typography from "material-ui/Typography";
 
-import Layout from "./_Layout";
+// import Layout from "./_Layout";
 import styles from "../../styles/paper";
+import Stats from "./Index/_Stats";
+import Dashboard from "./Index/_Dashboard";
+import Tabs from "./Index/_Tabs";
 
 class Index extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Layout>
+      <div>
+        <Tabs />
+        <Dashboard />
+        {/*
         <div className={classes.root}>
           <Paper className={classes.paper}>
             <Typography variant="title">
@@ -29,7 +35,8 @@ class Index extends Component {
             </p>
           </Paper>
         </div>
-      </Layout>
+        */}
+      </div>
     );
   }
 }

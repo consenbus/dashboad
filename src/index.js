@@ -7,10 +7,14 @@ import registerServiceWorker from "./utils/registerServiceWorker";
 import models from "./models";
 
 // UI
-import Reboot from "material-ui/Reboot";
+import CssBaseline from "material-ui/CssBaseline";
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 import blue from "material-ui/colors/blue";
 import grey from "material-ui/colors/grey";
+
+// CSS
+import "chartist/dist/chartist.css";
+import "jvectormap/jquery-jvectormap.css";
 
 // Modules
 import Home from "./containers/Home";
@@ -18,6 +22,7 @@ import Home from "./containers/Home";
 // Styles
 const theme = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       main: blue["A700"]
     },
@@ -30,7 +35,7 @@ const history = createBrowserHistory();
 ReactDOM.render(
   <Provider {...models}>
     <MuiThemeProvider theme={theme}>
-      <Reboot />
+      <CssBaseline />
       <Router history={history}>
         <Switch>
           <Route path="/" name="Home" component={Home} />
